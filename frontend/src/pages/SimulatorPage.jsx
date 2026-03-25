@@ -47,12 +47,19 @@ const s = {
   },
 }
 
+// 기관 유형별 예시 질문 (지자체 · 소상공인 · 일반기업 혼합)
 const EXAMPLES = [
+  // 지자체
   '주민등록등본은 어디서 발급하나요?',
-  '전입신고는 어떻게 하나요?',
-  '쓰레기 배출 시간이 어떻게 되나요?',
-  '여권 신청 절차를 알려주세요.',
-  '민원 담당 전화번호가 뭔가요?',
+  '전입신고 절차가 어떻게 되나요?',
+  // 음식점/카페
+  '오늘 영업시간이 어떻게 되나요?',
+  '주차 가능한가요?',
+  // 쇼핑몰/온라인
+  '배송은 얼마나 걸리나요?',
+  '교환·환불 정책이 궁금해요.',
+  // 공통
+  '담당자 연락처 알려주세요.',
 ]
 
 export default function SimulatorPage() {
@@ -98,7 +105,7 @@ export default function SimulatorPage() {
           <div style={s.messages}>
             {messages.length === 0 && (
               <div style={{ textAlign: 'center', color: '#9ca3af', marginTop: 40, fontSize: 14 }}>
-                질문을 입력하여 민원 응답을 테스트하세요.
+                질문을 입력하여 AI 응답을 테스트하세요.
               </div>
             )}
             {messages.map((m, i) => (

@@ -51,7 +51,7 @@ function FaqModal({ faq, onClose, onSave }) {
         {error && <div style={s.err}>{error}</div>}
         <form onSubmit={submit}>
           <label style={s.label}>카테고리</label>
-          <input style={s.input} value={form.category} onChange={set('category')} placeholder="민원, 주민서비스 등" />
+          <input style={s.input} value={form.category} onChange={set('category')} placeholder="메뉴, 배송, 이용안내 등" />
           <label style={s.label}>질문 *</label>
           <input style={s.input} value={form.question} onChange={set('question')} required />
           <label style={s.label}>답변 *</label>

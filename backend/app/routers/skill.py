@@ -76,7 +76,7 @@ async def kakao_skill(
     mod_service = ModerationService(db)
     mod_result = await mod_service.check(tenant_slug, user_key)
     if not mod_result.allowed:
-        answer = mod_result.message or "이용이 제한되었습니다. 담당 부서에 문의해 주세요."
+        answer = mod_result.message or "이용이 제한되었습니다. 운영자에게 문의해 주세요."
         return build_kakao_response(answer)
 
     # 라우터 실행

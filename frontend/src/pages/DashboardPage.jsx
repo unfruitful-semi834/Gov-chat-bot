@@ -46,7 +46,7 @@ export default function DashboardPage() {
 
       <div style={s.grid}>
         <div style={s.card}>
-          <div style={s.cardLabel}>총 민원 수</div>
+          <div style={s.cardLabel}>총 문의 수</div>
           <div style={s.cardVal}>{total.toLocaleString()}</div>
           <div style={s.cardSub}>누적</div>
         </div>

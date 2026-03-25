@@ -220,11 +220,18 @@ class ResponseRouter:
         request_id: Optional[str] = None,
     ) -> RoutingResult:
         # DB 조회 없이 tenant_config 메모리에서 직접 읽음 (~5ms)
-        phone = self.tenant_config.get("phone_number", "대표번호")
-        dept = self.tenant_config.get("fallback_dept", "담당부서")
-        name = self.tenant_config.get("tenant_name", "해당 기관")
+        phone = self.tenant_config.get("phone_number", "")
+        contact = self.tenant_config.get("fallback_dept", "")
+        name = self.tenant_config.get("tenant_name", "")
 
-        answer = f"해당 민원은 {name} {dept}({phone})로 문의해주세요."
+        if phone and contact:
+            answer = f"해당 문의는 {name} {contact}({phone})로 연락해 주세요."
+        elif phone:
+            answer = f"해당 문의는 {name}({phone})로 연락해 주세요." if name else f"해당 문의는 {phone}로 연락해 주세요."
+        elif name:
+            answer = f"죄송합니다. {name}에 직접 문의해 주세요."
+        else:
+            answer = "죄송합니다. 해당 내용을 찾을 수 없습니다. 담당자에게 직접 문의해 주세요."
         return RoutingResult(
             answer=answer,
             tier="D",

@@ -6,7 +6,7 @@ const nav = [
   { to: '/', label: '대시보드', icon: '📊' },
   { to: '/faq', label: 'FAQ 관리', icon: '❓' },
   { to: '/docs', label: '문서 관리', icon: '📄' },
-  { to: '/complaints', label: '민원 이력', icon: '📋' },
+  { to: '/complaints', label: '문의 이력', icon: '📋' },
   { to: '/moderation', label: '악성 감지', icon: '🚫' },
   { to: '/simulator', label: '시뮬레이터', icon: '💬' },
 ]
@@ -58,7 +58,7 @@ export default function Layout({ children }) {
   return (
     <div style={s.wrap}>
       <aside style={s.sidebar}>
-        <div style={s.brand}>🏛️ GovBot KR</div>
+        <div style={s.brand}>🤖 SmartBot KR</div>
         <nav style={s.navArea}>
           {nav.map(({ to, label, icon }) => (
             <NavLink key={to} to={to} end={to === '/'} style={({ isActive }) => s.link(isActive)}>
@@ -73,7 +73,7 @@ export default function Layout({ children }) {
         </div>
       </aside>
       <div style={s.main}>
-        <header style={s.header}>GovBot KR 관리 대시보드</header>
+        <header style={s.header}>SmartBot KR 관리 대시보드</header>
         <main style={s.content}>{children}</main>
       </div>
     </div>

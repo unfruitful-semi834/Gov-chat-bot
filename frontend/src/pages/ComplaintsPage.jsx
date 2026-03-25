@@ -31,7 +31,7 @@ export default function ComplaintsPage() {
 
   return (
     <div>
-      <div style={s.title}>민원 이력</div>
+      <div style={s.title}>문의 이력</div>
       <div style={s.note}>⚠️ 개인정보 보호 정책에 따라 발화 원문은 마스킹 처리되어 표시됩니다.</div>
       <div style={s.toolbar}>
         <select style={s.select} value={tier} onChange={(e) => setTier(e.target.value)}>

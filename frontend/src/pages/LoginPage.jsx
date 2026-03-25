@@ -52,12 +52,12 @@ export default function LoginPage() {
   return (
     <div style={s.page}>
       <div style={s.card}>
-        <div style={{ fontSize: 32, marginBottom: 12 }}>🏛️</div>
-        <div style={s.title}>GovBot KR</div>
+        <div style={{ fontSize: 32, marginBottom: 12 }}>🤖</div>
+        <div style={s.title}>SmartBot KR</div>
         <div style={s.sub}>관리자 로그인</div>
         <form onSubmit={submit}>
-          <label style={s.label}>기관 ID (tenant_id)</label>
-          <input style={s.input} value={form.tenant_id} onChange={set('tenant_id')} required placeholder="dongducheon" />
+          <label style={s.label}>조직 ID (tenant_id)</label>
+          <input style={s.input} value={form.tenant_id} onChange={set('tenant_id')} required placeholder="my-shop" />
           <label style={s.label}>이메일</label>
           <input style={s.input} type="email" value={form.email} onChange={set('email')} required placeholder="admin@example.com" />
           <label style={s.label}>비밀번호</label>
